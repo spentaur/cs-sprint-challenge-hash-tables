@@ -1,9 +1,13 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result = {}
+    for arr in arrays:
+        for num in arr:
+            if num in result:
+                result[num] += 1
+            else:
+                result[num] = 1
 
+    result = [key for key, value in result.items() if value > 1]
     return result
 
 
